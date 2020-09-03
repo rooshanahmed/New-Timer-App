@@ -1,4 +1,5 @@
 import React from 'react'
+import { Button } from '@material-ui/core'
 
 type Prop = {
     setTimeInSeconds: Function
@@ -8,9 +9,9 @@ type Prop = {
 const Controls = (props:Prop) => {
     return (
         <section>
-            <button>START</button>
-            <button>STOP</button>
-            <button>RESET</button>
+            <Button>START</Button>
+            <Button>STOP</Button>
+            <Button>RESET</Button>
         </section>
     )
 }
