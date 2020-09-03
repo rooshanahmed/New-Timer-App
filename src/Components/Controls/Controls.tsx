@@ -1,12 +1,18 @@
 import React from 'react'
 
-const Controls = () => {
+type Prop = {
+    setTimeInSeconds: Function
+}
+
+
+const Controls = (props:Prop) => {
     return (
-        <div>
-            
-        </div>
+        <section>
+            <button>START</button>
+            <button>STOP</button>
+            <button>RESET</button>
+        </section>
     )
 }
 
 export default Controls
-
