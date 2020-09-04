@@ -10,6 +10,12 @@ const Controls = (props:Prop) => {
     const { setTimeInSeconds } = props;
     const [intervalId , setIntervalId] = useState<number>(0)
 
+    const handlePlayButton = () => {
+        setInterval(() => {
+            setTimeInSeconds((previousState:number) => previousState + 1)
+        }, 1000)
+    }
+
     return (
         <section className="container-control">
             <button onClick={handlePlayButton}>START</button>
