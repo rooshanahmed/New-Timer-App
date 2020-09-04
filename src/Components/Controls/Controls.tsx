@@ -1,17 +1,16 @@
 import React from 'react'
-import { Button } from '@material-ui/core'
 
 type Prop = {
     setTimeInSeconds: Function
 }
 
-
 const Controls = (props:Prop) => {
+
     return (
-        <section>
-            <Button>START</Button>
-            <Button>STOP</Button>
-            <Button>RESET</Button>
+        <section className="container-control">
+            <button>START</button>
+            <button>STOP</button>
+            <button>RESET</button>
         </section>
     )
 }
