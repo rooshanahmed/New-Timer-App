@@ -11,9 +11,19 @@ const Controls = (props:Prop) => {
     const [intervalId , setIntervalId] = useState<number>(0)
 
     const handlePlayButton = () => {
-        setInterval(() => {
+        let interval:any = setInterval(() => {
             setTimeInSeconds((previousState:number) => previousState + 1)
         }, 1000)
+        setIntervalId(interval)
+    }
+
+    const handleStopButton = () => {
+        clearInterval(intervalId)
+    }
+
+    const handleResetButton = () => {
+        clearInterval(intervalId);
+        setTimeInSeconds(0);
     }
 
     return (
