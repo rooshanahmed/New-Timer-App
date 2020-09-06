@@ -1,11 +1,23 @@
 import React, { useState } from "react";
-import "./Controls.css";
+import { Button, makeStyles } from "@material-ui/core";
+// import "./Controls.css";
 
 type Prop = {
   setTimeInSeconds: Function;
 };
 
+const useStyles = makeStyles((theme) => ({
+  container: {
+    margin: "12px",
+    padding: "3px 8px",
+    fontSize: "1.3rem",
+  },
+}))
+
 const Controls = (props: Prop) => {
+
+  const classes = useStyles();
+
   const { setTimeInSeconds } = props;
   const [intervalId, setIntervalId] = useState<number>(0);
 
@@ -26,10 +38,10 @@ const Controls = (props: Prop) => {
   };
 
   return (
-    <section className="container-control">
-      <button onClick={handlePlayButton}>START</button>
-      <button onClick={handleStopButton}>STOP</button>
-      <button onClick={handleResetButton}>RESET</button>
+    <section className={classes.container}>
+      <Button onClick={handlePlayButton} variant="contained">START</Button>
+      <Button onClick={handleStopButton} variant="contained">STOP</Button>
+      <Button onClick={handleResetButton} variant="contained">RESET</Button>
     </section>
   );
 };
