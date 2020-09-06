@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, makeStyles } from "@material-ui/core";
+import { Button, makeStyles, ButtonGroup } from "@material-ui/core";
 
 
 type Prop = {
@@ -8,8 +8,8 @@ type Prop = {
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    margin: "12px",
     padding: "3px 8px",
+    margin: "3px",
     fontSize: "1.3rem",
     cursor: "pointer",
   },
@@ -40,9 +40,11 @@ const Controls = (props: Prop) => {
 
   return (
     <section className={classes.container}>
-      <Button onClick={handlePlayButton} variant="contained">START</Button>
-      <Button onClick={handleStopButton} variant="contained">STOP</Button>
-      <Button onClick={handleResetButton} variant="contained">RESET</Button>
+      <ButtonGroup size="large" color="primary" aria-label="large outlined primary button group" className={classes.container}>
+        <Button>One</Button>
+        <Button>Two</Button>
+        <Button>Three</Button>
+      </ButtonGroup>
     </section>
   );
 };
