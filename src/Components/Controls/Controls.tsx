@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Button, makeStyles, ButtonGroup } from "@material-ui/core";
 
-
 type Prop = {
   setTimeInSeconds: Function;
 };
@@ -12,10 +11,9 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "1.3rem",
     cursor: "pointer",
   },
-}))
+}));
 
 const Controls = (props: Prop) => {
-
   const classes = useStyles();
 
   const { setTimeInSeconds } = props;
@@ -39,7 +37,11 @@ const Controls = (props: Prop) => {
 
   return (
     <section className={classes.container}>
-      <ButtonGroup size="large" variant="contained" className={classes.container}>
+      <ButtonGroup
+        size="large"
+        variant="contained"
+        className={classes.container}
+      >
         <Button onClick={handlePlayButton}>START</Button>
         <Button onClick={handleStopButton}>STOP</Button>
         <Button onClick={handleResetButton}>RESET</Button>
