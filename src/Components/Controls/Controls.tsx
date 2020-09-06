@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, makeStyles } from "@material-ui/core";
-// import "./Controls.css";
+
 
 type Prop = {
   setTimeInSeconds: Function;
@@ -11,6 +11,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "12px",
     padding: "3px 8px",
     fontSize: "1.3rem",
+    cursor: "pointer",
   },
 }))
 
